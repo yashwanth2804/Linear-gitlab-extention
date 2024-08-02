@@ -80,3 +80,8 @@ If you encounter any problems or have any questions, please file an issue on the
 ## Acknowledgements
 
 Thanks to all the developers who use Linear and GitLab in their daily workflow. Your needs inspired this project.
+
+## Credits
+
+https://www.svgrepo.com/svg/363652/gitlab-logo-simple-duotone
+
