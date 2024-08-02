@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Linear Gitlab Repository Extension",
+    "name": "Linear Lab Linker",
     "version": "1.0",
-    "description": "An extension to add gitlab URLs to Linear",
+    "description": "An extension to link gitlab branch urls to Linear",
     "permissions": ["activeTab","tabs","storage"],
       
     "background": {
