@@ -1,0 +1,29 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitLab URL Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            width: 300px;
+            padding: 10px;
+        }
+        input[type="text"], input[type="submit"] {
+            margin: 5px 0;
+            width: 100%;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Set Base GitLab URL</h2>
+    <form id="urlForm">
+        <input type="text" id="gitlabUrl" placeholder="Enter GitLab URL" required />
+        <input type="submit" value="Save" />
+    </form>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
