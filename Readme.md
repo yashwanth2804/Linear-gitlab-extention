@@ -51,7 +51,7 @@
 
 ### Step 3: Use the Extension
 
-[<img src="usage.png" width="250"/>](usage.png)
+[<img src="usage.png" width="850"/>](usage.png)
 
 1. **Create a Linear Issue**:
    - When you create a new issue in Linear, the extension will automatically generate the corresponding GitLab branch link.
