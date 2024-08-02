@@ -51,9 +51,16 @@
 
 ### Step 3: Use the Extension
 
-[<img src="usage.png" width="850"/>](usage.png)
+[<img src="demo_img/popup_usage.png" width="850"/>](demo_img/popup_usage.png)
 
-1. **Create a Linear Issue**:
+1. **Adding GitLab Branch Link**:
+   - Click on the Extention icon in the browser toolbar. This will open the extension popup.
+   - Click on the "Add GitLab Branch Link" input on the popup.
+   - Enter the URL of the GitLab project.
+   - Click on the "Add GitLab Branch Link" button.
+
+[<img src="demo_img/usage.png" width="850"/>](demo_img/usage.png)
+2. **Create a Linear Issue**:
    - When you create a new issue in Linear, the extension will automatically generate the corresponding GitLab branch link.
    - The link will be displayed directly on the Linear issue page.
 
