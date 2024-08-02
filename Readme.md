@@ -1,3 +1,5 @@
+
+[<img src="logo.png" width="250"/>](logo.png)
 # Linear Lab Linker: GitLab Branch Connector
 
 ## Description
