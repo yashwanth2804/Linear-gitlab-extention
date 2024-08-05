@@ -80,7 +80,7 @@ function addGitLabLink(plink) {
 
 }
 
-function formatString(input, maxLength = 56) {
+function formatString(input, maxLength = 60) {
     let formatted = input.replace(/\s+/g, '-');
     if (formatted.length > maxLength) {
         const lastHyphenIndex = formatted.lastIndexOf('-', maxLength);
