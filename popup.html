@@ -21,6 +21,18 @@
     <h2>Set Base GitLab Project URL</h2>
     <form id="urlForm">
         <input type="text" id="gitlabUrl" placeholder="Enter GitLab project URL" required />
+        <select id="gitlabUrlSelect">
+            <option value="" disabled selected>Select a GitLab Link</option>
+            <option value="username/identifier-title">username/identifier-title</option>
+            <option value="username/identifier">username/identifier</option>
+            <option value="username-identifier-title">username-identifier-title</option>
+            <option value="username-identifier">username-identifier</option>
+            <option value="identifier-title">identifier-title</option>
+            <option value="title-identifier">title-identifier</option>
+            <option value="identifier">identifier</option>
+            <option value="feature/identifier-title">feature/identifier-title</option>
+            <option value="feature/identifier">feature/identifier</option>
+        </select>
         <input type="submit" value="Save" />
     </form>
     <div id="status"></div>
