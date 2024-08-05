@@ -14,7 +14,7 @@ document.getElementById('urlForm').addEventListener('submit', function (e) {
 
 // Load the saved URL when the popup is opened
 document.addEventListener('DOMContentLoaded', function () {
-    chrome.storage.sync.get(['gitlabUrl', 'branchFormat'], function (result) {
+    chrome.storage.sync.get(['gitlabUrl', 'branchFormat', 'username'], function (result) {
         if (result.gitlabUrl) {
             document.getElementById('gitlabUrl').value = result.gitlabUrl;
         }
