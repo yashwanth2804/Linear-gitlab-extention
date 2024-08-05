@@ -9,6 +9,9 @@ document.getElementById('urlForm').addEventListener('submit', function (e) {
     // Save the URL to Chrome storage
     chrome.storage.sync.set({ gitlabUrl: gitlabUrl, branchFormat: branchFormat, username: username }, function () {
         document.getElementById('status').textContent = 'Data saved!';
+        // Show the hint to reload
+        document.getElementById('hint').style.display = 'block';
+
     });
 });
 
