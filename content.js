@@ -1,18 +1,51 @@
 // let gitlab_base_url = "https://gitlab.com/vizencode/vizencode-gpt4o-extention/"
 function addGitLabLink(plink) {
-    console.log("@@ got URL link ", plink);
     const currentPageUrl = plink;
     const parts = currentPageUrl.split('/');
     const lastPart = parts[parts.length - 1];
-    const sto69 = parts[parts.length - 2].toLowerCase();
-    const lastSection = formatString(lastPart);
-    const lastSlashContent = `${sto69}-${lastSection}`;
+    const identifier = parts[parts.length - 2].toLowerCase();
+    const title = formatString(lastPart);
+    let customIdentitfier = '';
 
 
     // Get the base GitLab URL from storage
-    chrome.storage.sync.get(['gitlabUrl'], function (result) {
+    chrome.storage.sync.get(['gitlabUrl', 'branchFormat', 'username'], function (result) {
 
-        gitlab_base_url = trimTrailingSlash(result.gitlabUrl);
+        const { gitlabUrl, branchFormat, username } = result;
+
+        // check branchformat
+        if (branchFormat) {
+            if (branchFormat === 'username/identifier-title') {
+                customIdentitfier = `${username}/${identifier}-${title}`;
+            }
+            else if (branchFormat === 'username/identifier') {
+                customIdentitfier = `${username}/${identifier}`;
+            }
+            else if (branchFormat === 'username-identifier-title') {
+                customIdentitfier = `${username}-${identifier}-${title}`;
+            }
+            else if (branchFormat === 'username-identifier') {
+                customIdentitfier = `${username}-${identifier}`;
+            }
+            else if (branchFormat === 'identifier-title') {
+                customIdentitfier = `${identifier}-${title}`;
+            }
+            else if (branchFormat === 'title-identifier') {
+                customIdentitfier = `${title}-${identifier}`;
+            }
+            else if (branchFormat === 'identifier') {
+                customIdentitfier = `${identifier}`;
+            }
+            else if (branchFormat === 'feature/identifier-title') {
+                customIdentitfier = `feature/${identifier}-${title}`;
+            }
+            else if (branchFormat === 'feature/identifier') {
+                customIdentitfier = `feature/${identifier}`;
+            }
+        }
+        console.log("@@ got customIdentitfier ", customIdentitfier);
+
+        gitlab_base_url = trimTrailingSlash(gitlabUrl);
         console.log("@@ got storage ", gitlab_base_url);
         const appendGitLabLink = () => {
 
@@ -32,7 +65,7 @@ function addGitLabLink(plink) {
                     // Create a new link element
                     var gitLabLink = document.createElement('a');
                     gitLabLink.className = 'gitlab-link';
-                    gitLabLink.href = `${gitlab_base_url}/-/tree/feature/${lastSlashContent}`;
+                    gitLabLink.href = `${gitlab_base_url}/-/tree/${customIdentitfier}`;
                     gitLabLink.target = '_blank';
                     // gitLabLink.innerHTML = 'GitLab'; // Add the label "GitLab"
                     gitLabLink.style.marginLeft = '10px'; // Optional: Add some margin for better spacing
@@ -53,8 +86,7 @@ function addGitLabLink(plink) {
                     // Insert the new link before the "Copy issue URL" button
                     _parentNode.parentNode.insertBefore(gitLabLink, _parentNode.nextSibling);
                 } else {
-                    console.log("@@ found existing link ", existingLink);
-                    existingLink.href = `https://gitlab.com/vizencode/vizencode-gpt4o-extention/-/tree/feature/${lastSlashContent}`
+                    existingLink.href = `${gitlab_base_url}/-/tree/${customIdentitfier}`;
                 }
                 // Disconnect the observer once the button is found
                 observer.disconnect();
