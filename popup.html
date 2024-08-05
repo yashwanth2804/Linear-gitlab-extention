@@ -1,29 +1,82 @@
-<!-- popup.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitLab URL Settings</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 10px;
-            width: 400px;
-            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            width: 350px;
+            background-color: #f7f7f7;
+            color: #333;
         }
-        input[type="text"], input[type="submit"] {
-            margin: 5px 0;
+        h2 {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], select, input[type="submit"] {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 12px auto;
+        }
+        input[type="submit"] {
+            background-color: #fc6d26;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #e24329;
+        }
+        #status {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h2>Set Base GitLab Project URL</h2>
+    <h2>GitLab URL Settings</h2>
     <form id="urlForm">
-        <input type="text" id="gitlabUrl" placeholder="Enter GitLab project URL" required />
-        <input type=""text" id="username" placeholder="Enter Linear username" required />
-        <select id="branchFormat">
-            <option value="" disabled selected>Select a GitLab Link</option>
+        <label for="gitlabUrl">GitLab Project URL:</label>
+        <input type="text" id="gitlabUrl" placeholder="e.g., https://gitlab.com/your-project" required>
+        
+        <label for="username">Linear Username:</label>
+        <input type="text" id="username" placeholder="Your Linear username" required>
+        
+        <label for="branchFormat">Branch Format:</label>
+        <select id="branchFormat" required>
+            <option value="" disabled selected>Select a GitLab Link format</option>
             <option value="username/identifier-title">username/identifier-title</option>
             <option value="username/identifier">username/identifier</option>
             <option value="username-identifier-title">username-identifier-title</option>
@@ -34,7 +87,8 @@
             <option value="feature/identifier-title">feature/identifier-title</option>
             <option value="feature/identifier">feature/identifier</option>
         </select>
-        <input type="submit" value="Save" />
+        
+        <input type="submit" value="Save Settings">
     </form>
     <div id="status"></div>
     <script src="popup.js"></script>
