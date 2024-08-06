@@ -51,13 +51,18 @@
 
 ### Step 3: Use the Extension
 
-[<img src="demo_img/popup_usage.png" width="850"/>](demo_img/popup_usage.png)
+[<img src="demo_img/extesnionui.png" width="350"/>](demo_img/extesnionui.png)
+
 
 1. **Adding GitLab Branch Link**:
    - Click on the Extention icon in the browser toolbar. This will open the extension popup.
-   - Click on the "Add GitLab Branch Link" input on the popup.
-   - Enter the URL of the GitLab project.
-   - Click on the "Add GitLab Branch Link" button.
+   - Click on the "Add GitLab Branch Link" input and enter the URL of the GitLab project.
+   - Enter your username in the "Your Linear username" input.
+   - Select the branch format in the "Branch Format" dropdown.
+   - Finally click on "Save Settings",and reload the page.
+
+> hint: Goto [Linear gitlab settings](https://linear.app/settings/integrations/gitlab) to get your branch format.   
+    
 
 [<img src="demo_img/usage.png" width="850"/>](demo_img/usage.png)
 2. **Create a Linear Issue**:
