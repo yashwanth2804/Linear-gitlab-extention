@@ -76,18 +76,44 @@
    - Go to the extensions page in your browser (`chrome://extensions/` or `edge://extensions/`).
    - Click the "Reload" button on the extension to update it.
  
-
 ## Contributing
 
-Contributions to LinearLink are welcome! Please feel free to submit a Pull Request.
+### How to contribute?
+    Fork it [https://github.com/yashwanth2804/Linear-gitlab-extention]
+
+### Clone it
+
+    [https://github.com/<your_github_name>/Linear-gitlab-extention.git or git@github.com:your_github_name/Linear-gitlab-extention.git]
+
+git clone https://github.com/your_github_name/Linear-gitlab-extention.git
+### Create a branch
+
+    cd first-contributions
+
+    git checkout -b
+
+### Add features
+
+    git add you_worked_files
+
+    git commit -m "what your features"
+
+### push it
+
+    git push origin your_branch
+
+### Submit a pull request
+ Then from your account make a pull request
+
+
+### GitHub Account
+https://github.com/yashwanth2804
+
 
 ## License
 
 MIT
-
-## Support
-
-If you encounter any problems or have any questions, please file an issue on the GitHub repository.
+ 
 
 ## Acknowledgements
 
