@@ -49,7 +49,7 @@
 4. **The Extension is Now Installed**:
    - The extension will now appear in your list of installed extensions. You should see its icon in the browser toolbar.
 
-### Step 3: Use the Extension
+### Step 3: Setting up the Extension
 
 [<img src="demo_img/extesnionui.png" width="350"/>](demo_img/extesnionui.png)
 
