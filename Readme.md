@@ -51,7 +51,7 @@
 
 ### Step 3: Setting up the Extension
 
-[<img src="demo_img/extesnionui.png" width="350"/>](demo_img/extesnionui.png)
+[<img src="demo_img/extesnionui_mask.png" width="350"/>](demo_img/extesnionui_mask.png)
 
 
 1. **Adding GitLab Branch Link**:
