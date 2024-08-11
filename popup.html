@@ -63,14 +63,63 @@
             text-align: center;
             font-weight: bold;
         }
+
+        #gitService {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        #gitService input[type="radio"] {
+            display: none; /* Hide the default radio button */
+        }
+
+        #gitService label {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            font-weight: bold;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #gitService input[type="radio"]:checked + label {
+            background-color: #fc6d26;
+            color: white;
+            border-color: #fc6d26;
+        }
+
+        #gitService label:hover {
+            background-color: #e1e1e1;
+            border-color: #ccc;
+        }
+
+        #gitService input[type="radio"]:checked + label:hover {
+            background-color: #e24329;
+            border-color: #e24329;
+        }
+
     </style>
 </head>
 <body>
     <h2>GitLab URL Settings</h2>
     <form id="urlForm">
-        <label for="gitlabUrl">GitLab Project URL:</label>
-        <input type="text" id="gitlabUrl" placeholder="Add GitLab Branch Link e.g., https://gitlab.com/your-project" required>
         
+        <label for="gitService">Select Git Service:</label>
+        <div id="gitService">
+            <input type="radio" id="gitlab" name="gitService" value="gitlab" required>
+            <label for="gitlab">GitLab</label>
+            <input type="radio" id="github" name="gitService" value="github" required>
+            <label for="github">GitHub</label>
+        </div>
+
+        <label for="gitUrl" id="gitUrlLabel">GitHub/GitLab Project URL:</label>
+        <input type="text" id="gitUrl" placeholder="Add Github / GitLab Branch Link e.g., https://gitlab.com/your-project" required>
+
+
         <label for="username">Linear Username:</label>
         <input type="text" id="username" placeholder="Your Linear username" required>
         
