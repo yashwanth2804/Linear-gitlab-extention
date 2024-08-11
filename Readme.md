@@ -51,7 +51,7 @@
 
 ### Step 3: Setting up the Extension
 
-[<img src="demo_img/extention-ui.png" width="350"/>](demo_img/extention-ui.png)
+[<img src="demo_img/extention-ui-svg.png" width="350"/>](demo_img/extention-ui-svg.png)
 
 
 1. **Adding GitHub/GitLab Branch Link**:
