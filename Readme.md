@@ -1,16 +1,16 @@
 
 [<img src="logo.png" width="250"/>](logo.png)
-# Linear Lab Linker: GitLab Branch Connector
+# Linear Lab Linker: GitHub/GitLab Branch Connector
 
 ## Description
 
-"Linear Lab Linker" is a browser extension that enhances the integration between Linear.app and GitLab. It automatically adds a direct link to the corresponding GitLab branch on Linear issue pages, improving workflow efficiency for developers.
+"Linear Lab Linker" is a browser extension that enhances the integration between Linear.app and GitHub/GitLab. It automatically adds a direct link to the corresponding GitHub/GitLab branch on Linear issue pages, improving workflow efficiency for developers.
 
 ## Features
 
-- Adds a direct link to the GitLab branch on Linear issue pages
+- Adds a direct link to the GitHub/GitLab branch on Linear issue pages
 - Eliminates the need to wait for a Merge Request to see the branch link
-- Streamlines the development workflow between Linear and GitLab
+- Streamlines the development workflow between Linear and GitHub/GitLab
 
 ## Installation
 
@@ -51,22 +51,23 @@
 
 ### Step 3: Setting up the Extension
 
-[<img src="demo_img/extesnionui_mask.png" width="350"/>](demo_img/extesnionui_mask.png)
+[<img src="demo_img/extention-ui.png" width="350"/>](demo_img/extention-ui.png)
 
 
-1. **Adding GitLab Branch Link**:
+1. **Adding GitHub/GitLab Branch Link**:
    - Click on the Extention icon in the browser toolbar. This will open the extension popup.
-   - Click on the "Add GitLab Branch Link" input and enter the URL of the GitLab project.
+   - "Select Git Service" , choose the "GitHub" or "GitLab" service.
+   - Click on the "Add GitHub/GitLab Branch Link" input and enter the URL of the GitHub/GitLab project. 
    - Enter your username in the "Your Linear username" input.
    - Select the branch format in the "Branch Format" dropdown.
    - Finally click on "Save Settings",and reload the page.
 
-> hint: Goto [Linear gitlab settings](https://linear.app/settings/integrations/gitlab) to get your branch format.   
+> hint: Goto [Linear gitlab settings](https://linear.app/settings/integrations/gitlab) to get your branch format for GitLab and [Linear gitlab settings](https://linear.app/settings/integrations/github) to get your branch format for GitHub. 
     
 
 [<img src="demo_img/usage.png" width="850"/>](demo_img/usage.png)
 2. **Create a Linear Issue**:
-   - When you create a new issue in Linear, the extension will automatically generate the corresponding GitLab branch link.
+   - When you create a new issue in Linear, the extension will automatically generate the corresponding GitHub/GitLab branch link.
    - The link will be displayed directly on the Linear issue page.
 
 ### Updating the Extension
@@ -117,7 +118,7 @@ MIT
 
 ## Acknowledgements
 
-Thanks to all the developers who use Linear and GitLab in their daily workflow. Your needs inspired this project.
+Thanks to all the developers who use Linear and GitHub/GitLab in their daily workflow. Your needs inspired this project.
 
 ## Credits
 
