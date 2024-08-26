@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Linear Lab Linker",
     "version": "1.0",
-    "description": "An extension to link gitlab branch urls to Linear",
+    "description": "An extension to link Gitlab/GitHub branch urls to Linear",
     "permissions": ["activeTab","tabs","storage"],
       
     "background": {
