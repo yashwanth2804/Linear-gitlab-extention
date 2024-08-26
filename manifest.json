@@ -12,9 +12,9 @@
       "default_popup": "popup.html"       
   },
   "icons": {
-     "16": "logo.png",
-    "48": "logo.png",
-    "128": "logo.png"
+     "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
     "content_scripts": [
       { 
