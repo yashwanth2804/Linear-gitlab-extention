@@ -21,17 +21,30 @@ function validateForm() {
     const gitUrl = document.getElementById('gitUrl').value;
     const username = document.getElementById('username').value;
     const branchFormat = document.getElementById('branchFormat').value;
+    const selectedService = document.querySelector('input[name="gitService"]:checked');
+    const serviceError = document.getElementById('serviceError');
+
+    
+    if (!selectedService) { 
+        serviceError.textContent = 'Please select either GitHub or GitLab';
+        serviceError.style.display = 'block';
+        return false;
+    }
 
     if (!gitUrl || !username || !branchFormat) {
-        alert('Please fill in all fields');
+        serviceError.textContent = 'Please fill in all fields';
+        serviceError.style.display = 'block';
         return false;
     }
 
     // Basic URL validation
     if (!/^https?:\/\/.+/.test(gitUrl)) {
-        alert('Please enter a valid URL');
+        serviceError.textContent = 'Please enter a valid URL';
+        serviceError.style.display = 'block';
         return false;
     }
+
+    serviceError.style.display = 'none';
 
     return true;
 }
