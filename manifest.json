@@ -3,7 +3,7 @@
   "name": "Linear Lab Linker",
   "version": "1.0",
   "description": "An extension to link Gitlab/GitHub branch urls to Linear, test change",
-  "permissions": ["activeTab", "tabs", "storage"],
+  "permissions": ["tabs", "storage"],
 
   "background": {
     "service_worker": "background.js"
