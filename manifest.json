@@ -1,27 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "Linear Lab Linker",
-    "version": "1.0",
-    "description": "An extension to link Gitlab/GitHub branch urls to Linear",
-    "permissions": ["activeTab","tabs","storage"],
-      
-    "background": {
+  "manifest_version": 3,
+  "name": "Linear Lab Linker",
+  "version": "1.0",
+  "description": "An extension to link Gitlab/GitHub branch urls to Linear, test change",
+  "permissions": ["activeTab", "tabs", "storage"],
+
+  "background": {
     "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html"       
+  },
+  "action": {
+    "default_popup": "popup.html"
   },
   "icons": {
-     "16": "icon16.png",
+    "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
-    "content_scripts": [
-      { 
-        "matches": ["*://*.linear.app/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ]
-  }
-  
+  "content_scripts": [
+    {
+      "matches": ["*://*.linear.app/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "homepage_url": "https://linklinear.vercel.app",
+  "author": "Storenaut Apps"
+}

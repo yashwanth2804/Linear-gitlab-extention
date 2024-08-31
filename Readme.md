@@ -4,7 +4,7 @@
 
 ## Description
 
-"Linear Lab Linker" is a browser extension that enhances the integration between Linear.app and GitHub/GitLab. It automatically adds a direct link to the corresponding GitHub/GitLab branch on Linear issue pages, improving workflow efficiency for developers.
+["Linear Lab Linker"](https://linklinear.vercel.app/) is a browser extension that enhances the integration between Linear.app and GitHub/GitLab. It automatically adds a direct link to the corresponding GitHub/GitLab branch on Linear issue pages, improving workflow efficiency for developers.
 
 ## Features
 
