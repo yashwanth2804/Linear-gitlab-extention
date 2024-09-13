@@ -117,7 +117,7 @@ MIT
 
 ## Acknowledgements
 
-Thanks to all the developers who use Linear and GitLab in their daily workflow. Your needs inspired this project.
+Thanks to all the developers who use Linear and GitLab in their daily workflow. Your needs inspired this project. Copy right
 
 ## Credits
 
