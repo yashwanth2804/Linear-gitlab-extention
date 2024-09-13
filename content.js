@@ -144,6 +144,7 @@ function formatString(input, maxLength = DEFAULT_MAX_LENGTH) {
         const cutOffIndex = lastHyphenIndex !== -1 ? lastHyphenIndex : maxLength;
         formatted = formatted.slice(0, cutOffIndex);
     }
+    formatted = formatted.replace(/\[|\]/g, '');
     return formatted;
 }
 

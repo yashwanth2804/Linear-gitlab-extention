@@ -1,10 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Linear Lab Linker",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "An extension to link Gitlab/GitHub branch urls to Linear, test change",
-  "permissions": ["tabs", "storage"],
-
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -18,8 +20,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.linear.app/*"],
-      "js": ["content.js"],
+      "matches": [
+        "*://*.linear.app/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle"
     }
   ],
